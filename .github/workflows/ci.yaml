@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  github-actions-lint:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/github-actions-lint.yaml
+
+  yaml-lint:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/yaml-lint.yaml
+
+  eof-newline-lint:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/eof-newline-lint.yaml
+
+  file-naming-lint:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/file-naming-lint.yaml

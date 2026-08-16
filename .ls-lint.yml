@@ -1,0 +1,6 @@
+ls:
+  .yaml: kebab-case
+  .yml: kebab-case
+
+ignore:
+  - .git

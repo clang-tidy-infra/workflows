@@ -1,0 +1,13 @@
+name: Validate PR Title
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+permissions: {}
+
+jobs:
+  pr-title-lint:
+    permissions:
+      pull-requests: read
+    uses: ./.github/workflows/pr-title-lint.yaml
